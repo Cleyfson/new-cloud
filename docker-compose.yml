@@ -1,0 +1,28 @@
+services:
+  rules-generator:
+    build:
+      context: .
+      dockerfile: rules-generator/Dockerfile
+    container_name: rules_generator_container
+    volumes:
+      - ./rules-generator:/app
+    ports:
+      - "5000:5000"
+    command: python app.py
+
+  api-server:
+    build:
+      context: .
+      dockerfile: api_server/Dockerfile
+    container_name: api_server_container
+    volumes:
+      - ./api_server:/app
+      - ./rules-generator/recommendation_rules.pkl:/app/recommendation_rules.pkl
+    ports:
+      - "30502:30502"
+    depends_on:
+      - rules-generator
+
+networks:
+  default:
+    driver: bridge
