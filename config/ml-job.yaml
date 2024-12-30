@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: rules-generator
+      name: rules-generator-{{ .Values.csv_filename }}
   namespace: cleifsonaraujo
 spec:
   template:
