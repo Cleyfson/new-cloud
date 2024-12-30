@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
       - name: api-server
-        image: cleifson/api-server:2
+        image: cleifson/api-server:3
         ports:
-        - containerPort: 5000
+        - containerPort: 30502
         volumeMounts:
         - name: shared-volume
           mountPath: /mnt/shared

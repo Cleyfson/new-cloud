@@ -8,6 +8,6 @@ spec:
     app: api-server
   ports:
     - protocol: TCP
-      port: 30502
-      targetPort: 5000
+      port: 80
+      targetPort: 30502
   clusterIP: None

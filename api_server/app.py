@@ -21,8 +21,7 @@ def load_model(model_path):
     
     with open(model_path, 'rb') as f:
         model = pickle.load(f)
-        print(model)
-    
+
     logging.info(f"Modelo carregado do arquivo {model_path}. Última atualização: {MODEL_DATE}")
     return model
 
@@ -70,5 +69,5 @@ if __name__ == "__main__":
     app.model = load_model(MODEL_PATH)
     app.version = "1.0.0"
     
-    PORT = 30502
+    PORT = 52011
     app.run(host="0.0.0.0", port=PORT)

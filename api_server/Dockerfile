@@ -6,6 +6,6 @@ COPY ./api_server /app
 
 RUN pip install --no-cache-dir Flask
 
-EXPOSE 30502
+EXPOSE 52011
 
 CMD ["python", "app.py"]
