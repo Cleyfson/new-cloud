@@ -11,10 +11,16 @@ spec:
     spec:
       containers:
       - name: rules-generator
-        image: cleifson/rules-generator:5
+        image: cleifson/rules-generator:6
         volumeMounts:
         - name: shared-volume
           mountPath: /mnt/shared
+        env:
+        - name: CSV_FILENAME
+          valueFrom:
+            configMapKeyRef:
+              name: csv-file-config
+              key: csv_filename
       restartPolicy: Never
       volumes:
       - name: shared-volume

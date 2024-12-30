@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: csv-file-config
+  namespace: cleifsonaraujo
+data:
+  csv_filename: "2023_spotify_ds1.csv"

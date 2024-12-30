@@ -1,6 +1,7 @@
 import pandas as pd
 from fpgrowth_py import fpgrowth
 import pickle
+import os
 
 def preprocess_data(filename, chunksize=200000):
     playlists_baskets = []
@@ -41,7 +42,7 @@ def load_rules(filename='../mnt/shared/recommendation_rules.pkl'):
         return pickle.load(f)
 
 def main():
-    csv_filename = '../mnt/shared/2023_spotify_ds1.csv'
+    csv_filename = os.getenv('CSV_FILENAME', '../mnt/shared/2023_spotify_ds1.csv')
 
     print("Processando dados do CSV...")
     playlists_baskets, track_uri_to_name = preprocess_data(csv_filename)
