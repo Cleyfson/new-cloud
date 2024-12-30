@@ -23,6 +23,14 @@ The system architecture consists of:
 
 ## Project Structure  
 
+## Technologies  
+
+- **Languages**: Python, Flask  
+- **Tools**: Docker, Kubernetes, ArgoCD  
+- **Machine Learning**: Association Rules (Frequent Itemset Mining)  
+- **Database/Storage**: Persistent Volume for data storage  
+- **CI/CD**: ArgoCD for continuous deployment management  
+
 ```plaintext
 /playlist-recommendation-service
 │
@@ -45,12 +53,3 @@ The system architecture consists of:
 │   ├── app.py             # Playlist recommendation logic using machine learning algorithms
 │
 └── README.md              # Project overview and setup instructions
-
-
-## Technologies  
-
-- **Languages**: Python, Flask  
-- **Tools**: Docker, Kubernetes, ArgoCD  
-- **Machine Learning**: Association Rules (Frequent Itemset Mining)  
-- **Database/Storage**: Persistent Volume for data storage  
-- **CI/CD**: ArgoCD for continuous deployment management  

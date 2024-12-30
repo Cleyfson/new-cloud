@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-server-{{ .Values.csv_filename }}
+  name: api-server
   namespace: cleifsonaraujo
 spec:
   replicas: 1
