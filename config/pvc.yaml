@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: project2-pv2-cleifsonaraujo
+  name: project2-pv2-cleifsonaraujo-claim
   namespace: cleifsonaraujo
 spec:
   accessModes:
@@ -11,4 +11,5 @@ spec:
       storage: 1Gi
   selector:
     matchLabels:
-      app: cleifsonaraujo
+      namespace: cleifsonaraujo
+  storageClassName: standard
