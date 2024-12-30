@@ -15,12 +15,12 @@ spec:
     spec:
       containers:
       - name: api-server
-        image: cleifson/api_server:1
+        image: cleifson/api-server:2
         ports:
         - containerPort: 5000
         volumeMounts:
         - name: shared-volume
-          mountPath: /data
+          mountPath: /mnt/shared
       volumes:
       - name: shared-volume
         persistentVolumeClaim:

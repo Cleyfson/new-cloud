@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: rules-generator
-        image: cleifson/rules-generator:4
+        image: cleifson/rules-generator:5
         volumeMounts:
         - name: shared-volume
           mountPath: /mnt/shared

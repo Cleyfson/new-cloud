@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 app = Flask(__name__)
 
-MODEL_PATH = "/data/recommendation_rules.pkl"
+MODEL_PATH = "../mnt/shared/recommendation_rules.pkl"
 MODEL_DATE = None
 
 def load_model(model_path):

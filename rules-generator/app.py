@@ -32,16 +32,16 @@ def generate_association_rules(playlists_baskets, track_uri_to_name, minSupRatio
 
     return rules_with_names
 
-def save_rules(rules, filename='/data/recommendation_rules.pkl'):
+def save_rules(rules, filename='../mnt/shared/recommendation_rules.pkl'):
     with open(filename, 'wb') as f:
         pickle.dump(rules, f)
 
-def load_rules(filename='/data/recommendation_rules.pkl'):
+def load_rules(filename='../mnt/shared/recommendation_rules.pkl'):
     with open(filename, 'rb') as f:
         return pickle.load(f)
 
 def main():
-    csv_filename = '2023_spotify_ds1.csv'
+    csv_filename = '../mnt/shared/2023_spotify_ds1.csv'
 
     print("Processando dados do CSV...")
     playlists_baskets, track_uri_to_name = preprocess_data(csv_filename)
