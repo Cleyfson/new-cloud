@@ -19,5 +19,5 @@ spec:
       volumes:
       - name: shared-volume
         persistentVolumeClaim:
-          claimName: project2-pv2-cleifsonaraujo
+          claimName: project2-pv2-cleifsonaraujo-claim
   backoffLimit: 1

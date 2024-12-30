@@ -12,3 +12,4 @@ spec:
   selector:
     matchLabels:
       namespace: cleifsonaraujo
+  storageClassName: default-storage-class-cleifsonaraujo
