@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: rules-generator
+  namespace: cleifsonaraujo
+spec:
+  template:
+    metadata:
+      labels:
+        app: rules-generator
+    spec:
+      containers:
+      - name: rules-generator
+        image: cleifson/rules-generator:4
+        volumeMounts:
+        - name: shared-volume
+          mountPath: /mnt/shared
+      restartPolicy: Never
+      volumes:
+      - name: shared-volume
+        persistentVolumeClaim:
+          claimName: project2-pv2-cleifsonaraujo
+  backoffLimit: 1

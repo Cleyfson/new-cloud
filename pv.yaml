@@ -2,14 +2,14 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: project2-pv2-cleifsonaraujo
-  namespace: cleifsonaraujo
+  labels:
+    type: local
 spec:
   capacity:
     storage: 1Gi
-  volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
-  persistentVolumeReclaimPolicy: Recycle
+  persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   hostPath:
-    path: /home/cleifson/projects/playlist-recommendation-service
+    path: /mnt/project2-pv2-cleifsonaraujo

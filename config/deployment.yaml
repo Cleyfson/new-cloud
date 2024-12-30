@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-server
+  namespace: cleifsonaraujo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-server
+  template:
+    metadata:
+      labels:
+        app: api-server
+    spec:
+      containers:
+      - name: api-server
+        image: cleifson/api_server:1
+        ports:
+        - containerPort: 5000
+        volumeMounts:
+        - name: shared-volume
+          mountPath: /data
+      volumes:
+      - name: shared-volume
+        persistentVolumeClaim:
+          claimName: project2-pv2-cleifsonaraujo
