@@ -1,6 +1,7 @@
 # DevOps - Playlist Recommendation System  
 
 ## Project Structure  
+```plaintext
 /playlist-recommendation-service
 │
 ├── /datasets              # Datasets and music lists
