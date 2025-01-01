@@ -3,10 +3,6 @@
 ## Project Structure  
 ```plaintext
 /playlist-recommendation-service
-│
-├── /datasets              # Datasets and music lists
-│   ├── dataset.csv        # Example dataset used to train the recommendation model
-
 ├── /config                # Kubernetes configuration files for service deployment
 │   ├── deployment.yaml    # Deployment definitions for Kubernetes
 │   ├── service.yaml       # Service definitions for Kubernetes
